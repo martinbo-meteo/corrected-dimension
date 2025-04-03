@@ -85,7 +85,7 @@ def comp_dim_resampling(pts, comp_pt, percentages, new_samples, bandwidths, coor
         new_percentages = percentages/np.max(percentages) * 100
         
         if corrected == True:
-            resampled_radii[:, k], dim[:, k] = comp_corrected_dim(new_analogs, comp_pt, new_percentages, [bw], provided_kde = kde, verbose = True, coord_axis = coord_axis)
+            resampled_radii[:, k], dim[:, k] = comp_corrected_dim(new_analogs, comp_pt, new_percentages, [bw], provided_kde = kde, verbose = False, coord_axis = coord_axis)
         else:
             resampled_radii[:, k], dim[:, k] = comp_usual_dim(new_analogs, comp_pt, new_percentages, coord_axis = coord_axis)
             
